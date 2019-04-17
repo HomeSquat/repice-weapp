@@ -1,0 +1,4 @@
+<!--miniprogram/pages/find/index/index.wxml-->
+<view class="find">
+  <item wx:for="{{ itemList }}" item-data="{{ item }}"></item>
+</view>

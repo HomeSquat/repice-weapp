@@ -1,0 +1,11 @@
+<!--component/item/index.wxml-->
+  <view class="find--item">
+    <image mode="aspectFill" src="{{ itemData.img }}" class="find--item__bg"></image>
+    <view class="find--item__mask"></view>
+    <view class="find--item__title">{{ itemData.title }}</view>
+    <view class="find--item__des">{{ itemData.des }}</view>
+    <view class="find--item__user">
+      <image src="{{ itemData.user.avatar }}" class="find--item__user_avatar"></image>
+      <text class="find--item__user_name">{{ itemData.user.name }}</text>
+    </view>
+  </view>

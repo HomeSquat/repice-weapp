@@ -1,0 +1,7 @@
+/**app.wxss**/
+page{
+  padding: 30rpx;
+}
+view{
+  box-sizing: border-box;
+}

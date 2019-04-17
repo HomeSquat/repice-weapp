@@ -1,0 +1,22 @@
+/* miniprogram/pages/login/login.wxss */
+.content{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%)
+}
+.content--tip{
+  margin-bottom: 20rpx;
+  text-align: center;
+  font-size: 32rpx;
+  line-height: 40rpx;
+}
+.content--btn{
+  width: 200rpx;
+  height: 80rpx;
+  background: #61bfad;
+  border: none;
+  line-height: 80rpx;
+  font-size: 32rpx;
+  color: #fff
+}

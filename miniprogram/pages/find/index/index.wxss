@@ -1,0 +1,5 @@
+/* miniprogram/pages/find/index/index.wxss */
+
+.find--item {
+  margin-bottom: 30rpx;
+}
