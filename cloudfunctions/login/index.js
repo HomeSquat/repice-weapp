@@ -12,7 +12,7 @@ const db = cloud.database()
  * event 参数包含小程序端调用传入的 data
  * 
  */
-exports.main = async(event, context) => {
+exports.main = async (event, context) => {
   // 可执行其他自定义逻辑
   // console.log 的内容可以在云开发云函数调用日志查看
 
@@ -22,7 +22,7 @@ exports.main = async(event, context) => {
     let count = await db.collection('user').where({
       _openId: wxContext.OPENID
     }).count()
-    if(!count.total){
+    if (!count.total) {
       await db.collection('user').add({
         data: {
           _openId: wxContext.OPENID,

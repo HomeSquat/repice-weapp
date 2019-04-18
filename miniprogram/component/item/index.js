@@ -17,14 +17,26 @@ Component({
       }
     }
   },
-
   /**
    * 组件的初始数据
    */
   data: {
-
+    description: ''
   },
-
+  lifetimes: {
+    attached() {
+      const itemTemp = []
+      if (this.data.itemData.des.length > 60) {
+        this.setData({
+          description: this.data.itemData.des.substr(0, 60) + "..."
+        })
+      } else {
+        this.setData({
+          description: this.data.itemData.des
+        })
+      }
+    }
+  },
   /**
    * 组件的方法列表
    */

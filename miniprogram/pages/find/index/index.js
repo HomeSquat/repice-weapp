@@ -42,6 +42,8 @@ Page({
       wx.reLaunch({
         url: "/pages/access/login/login",
       })
+    }else{
+      this.getFindList(1)
     }
   },
 
@@ -78,5 +80,22 @@ Page({
    */
   onReachBottom: function () {
 
+  },
+  getFindList(page){
+    wx.cloud.callFunction({
+      name: "getFindList",
+      data: {
+        page,
+        pageSize: 20
+      }
+    })
+    .then(res => {
+      this.setData({
+        itemList: res.result.data
+      })
+    })
+    .catch(err => {
+      console.log(err)
+    })
   }
 })

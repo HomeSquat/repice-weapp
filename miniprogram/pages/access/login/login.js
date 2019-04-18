@@ -43,7 +43,6 @@ Page({
 
   },
   getUserInfoBack(res) {
-    console.log(res)
     wx.cloud.callFunction({
         name: "login",
         data: {
@@ -52,7 +51,6 @@ Page({
         }
       })
       .then(res => {
-        console.log(res)
         let data = res.result.data[0]
         let userInfo = {
           _id: data._id,
