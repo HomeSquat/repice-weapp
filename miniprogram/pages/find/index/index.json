@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "发现",
+  "enablePullDownRefresh": true,
   "usingComponents": {
-    "item": "/component/item/index"
+    "item": "/component/item/index",
+    "pagination": "/component/pagination/index"
   }
 }

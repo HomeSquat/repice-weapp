@@ -8,11 +8,21 @@ exports.main = async(event, context) => {
   const wxContext = cloud.getWXContext()
   let index = (event.page - 1) * event.pageSize
   try {
-    return await db.collection('recipe')
+    let count = await db.collection('recipe').count()
+    let total = count.total
+    let totalPage = Math.ceil(total / event.pageSize)
+    let list = await db.collection('recipe')
       .orderBy('create_time', 'asc')
       .skip(index)
       .limit(event.pageSize)
       .get()
+    return {
+      pagination: {
+        total: total,
+        totalPage: totalPage
+      },
+      list: list
+    }
   } catch (e) {
     console.log(e)
   }
