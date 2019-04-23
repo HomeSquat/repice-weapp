@@ -1,2 +1,8 @@
 <!--miniprogram/pages/collection/index/index.wxml-->
-<text>miniprogram/pages/collection/index/index.wxml</text>
+<view class="collection">
+  <view class="tabs">
+    <view wx:for="{{ tabs }}" wx:key="{{ item.name }}" class="tabs--item">
+      <text class="tabs--item__text">{{ item.name }}</text>
+    </view>
+  </view>
+</view>

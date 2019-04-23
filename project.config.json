@@ -28,7 +28,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -47,6 +47,13 @@
 					"id": -1,
 					"name": "注册页面",
 					"pathName": "pages/access/reg/reg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "收藏",
+					"pathName": "pages/collection/index/index",
 					"query": "",
 					"scene": null
 				}
