@@ -1,6 +1,6 @@
 /**app.wxss**/
 page{
-  padding: 30rpx;
+  background: #fff;
 }
 view{
   box-sizing: border-box;

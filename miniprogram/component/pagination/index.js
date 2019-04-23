@@ -4,6 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    statusText: {
+      type: String,
+      value: '上拉加载更多'
+    },
     visible: {
       type: Boolean,
       value: false

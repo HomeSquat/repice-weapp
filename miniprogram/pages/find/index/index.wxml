@@ -2,6 +2,6 @@
 <view class="find">
   <view class="find--list">
     <item wx:for="{{ itemList }}" wx:key="{{ item._id }}" item-data="{{ item }}" class="find-item"></item>
-    <pagination visible="{{ isShow }}"/>
   </view>
+  <pagination visible="{{ paginationStatus.visible }}" statusText="{{ paginationStatus.text }}" />
 </view>

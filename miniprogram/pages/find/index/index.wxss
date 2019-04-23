@@ -1,4 +1,4 @@
 /* miniprogram/pages/find/index/index.wxss */
-.find--list{
-  width: 690rpx;
+.find{
+  padding: 30rpx;
 }

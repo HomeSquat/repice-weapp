@@ -1,8 +1,8 @@
 <!--component/pagination/index.wxml-->
-<view class="{{ visible ? 'show' : '' }} paginationBox">
+<view class=" {{ visible ? 'show' : '' }} paginationBox">
   <view class="pagination">
     <view class="pagination--line"></view>
-    <view class="pagination--text">上拉加载更多</view>
+    <view class="pagination--text">{{ statusText }}</view>
     <view class="pagination--line"></view>
   </view>
 </view>

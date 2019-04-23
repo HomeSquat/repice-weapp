@@ -15,7 +15,10 @@ Page({
       total: 1,
       totalPage: 2
     },
-    isShow: true,
+    paginationStatus: {
+      visible: false,
+      text: '加载中'
+    },
     itemList: []
   },
 
@@ -87,7 +90,8 @@ Page({
       })
     }else{
       this.setData({
-        'pagination.page': page + 1
+        'pagination.page': page + 1,
+        'paginationStatus.visible': true
       })
     }
     if (this.data.pagination.page <= this.data.pagination.totalPage) {
@@ -100,18 +104,34 @@ Page({
         })
         .then(res => {
           console.log(res)
-          let oldItemList = this.data.itemList
-          this.setData({
-            itemList: type === 'REFRESH' ? res.result.list.data : oldItemList.concat(res.result.list.data),
-            'pagination.total': res.result.pagination.total,
-            'pagination.totalPage': res.result.pagination.totalPage
-          })
+          if (type === 'REFRESH'){
+            this.setData({
+              itemList: res.result.list.data,
+              'pagination.total': res.result.pagination.total,
+              'pagination.totalPage': res.result.pagination.totalPage,
+            })
+          }else{
+            let oldItemList = this.data.itemList
+            setTimeout(()=>{
+              this.setData({
+                itemList: oldItemList.concat(res.result.list.data),
+                'pagination.total': res.result.pagination.total,
+                'pagination.totalPage': res.result.pagination.totalPage,
+                'paginationStatus.visible': false
+              })
+            },500)
+          }
         })
         .catch(err => {
-          console.log(err)
+          this.setData({
+            'paginationStatus.visible': false
+          })
         })
     } else {
-      console.log("没有更多内容了")
+      this.setData({
+        'paginationStatus.visible': true,
+        'paginationStatus.text': '没有更多了',
+      })
     }
   }
 })
