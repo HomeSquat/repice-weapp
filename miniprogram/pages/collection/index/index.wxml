@@ -1,8 +1,35 @@
 <!--miniprogram/pages/collection/index/index.wxml-->
 <view class="collection">
-  <view class="tabs">
-    <view wx:for="{{ tabs }}" wx:key="{{ item.name }}" class="tabs--item">
-      <text class="tabs--item__text">{{ item.name }}</text>
+  <view id="tabs" class="tabs">
+    <view wx:for="{{ tabs }}" wx:key="{{ item.name }}" id="{{ item.index }}" bindtap="changeCurrentIndex" class="tabs--item">
+      <text class="{{ item.index === currentIndex ? 'active' : '' }} tabs--item__text">{{ item.name }}</text>
     </view>
+  </view>
+  <view class="content">
+    <view wx:if="{{ currentIndex === '0' }}" class="content--item recipe">
+      <swiper current-item-id="{{ currentItem }}" previous-margin="80rpx" next-margin="80rpx" style="height: {{ contentHeight }}" bindchange="changeItem">
+        <block wx:for="{{recipeList}}" wx:key="{{ item.name }}">
+          <swiper-item item-id="{{ item.id }}" class="swiper--item">
+            <view class="{{ currentItem === item.id ? 'active' : '' }} swiper--item__content">
+              <image mode="aspectFill" src="{{ item.img }}" class="swiperItem--image"></image>
+              <view class="swiperItem--bottom">
+                <view class="swiperItem--title">{{ item.title }}</view>
+                <view class="swiperItem--des">{{ item.des }}</view>
+                <view class="swiperItem--info">
+                  <view class="swiperItem--info__item swiperItem--info__cuisine"><text class="label">菜系：</text>{{ item.cuisine }}</view>
+                  <view class="swiperItem--info__item swiperItem--info__efficacy"><text class="label">功效：</text>{{ item.efficacy }}</view>
+                  <view class="swiperItem--info__item swiperItem--info__level"><text class="label">难度：</text>{{ item.level }}</view>
+                </view>
+                <view class="swiperItem--user">
+                  <image src="{{ item.user.avatarUrl }}" class="swiperItem--user__avatar"></image>
+                  <text class="swiperItem--user__name">{{ item.user.nickName }}</text>
+                </view>
+              </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view wx:if="{{ currentIndex === '1' }}" class="content--item works">2</view>
   </view>
 </view>

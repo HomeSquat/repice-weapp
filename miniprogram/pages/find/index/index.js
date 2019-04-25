@@ -86,7 +86,9 @@ Page({
     let page = this.data.pagination.page
     if (type === 'REFRESH') {
       this.setData({
-        'pagination.page': 1
+        'pagination.page': 1,
+        'paginationStatus.visible': false,
+        'paginationStatus.text': '加载中'
       })
     }else{
       this.setData({
