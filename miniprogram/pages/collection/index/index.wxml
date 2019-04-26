@@ -18,7 +18,9 @@
                 <view class="swiperItem--info">
                   <view class="swiperItem--info__item swiperItem--info__cuisine"><text class="label">菜系：</text>{{ item.cuisine }}</view>
                   <view class="swiperItem--info__item swiperItem--info__efficacy"><text class="label">功效：</text>{{ item.efficacy }}</view>
-                  <view class="swiperItem--info__item swiperItem--info__level"><text class="label">难度：</text>{{ item.level }}</view>
+                  <view class="swiperItem--info__item swiperItem--info__level"><text class="label">难度：</text>
+                    <rate value="{{ item.level }}" size="15" class="rate"/>
+                  </view>
                 </view>
                 <view class="swiperItem--user">
                   <image src="{{ item.user.avatarUrl }}" class="swiperItem--user__avatar"></image>

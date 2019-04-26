@@ -39,12 +39,25 @@ Page({
         des: '发源于重庆缙云山，由川渝地方麻辣风味融合而来。 麻辣香锅源于土家风味，是当地老百姓的家常做法, 以麻、辣、鲜、香、油、混搭为特',
         cuisine: '川菜',
         efficacy: '活血化瘀，驱寒除湿',
-        level: 3,
+        level: 5,
         user: {
           nickName: '东东',
           avatarUrl: '/static/images/0002.jpg'
         }
       },
+      {
+        id: 3,
+        title: '第三个',
+        img: '/static/images/0003.jpg',
+        des: '发源于重庆缙云山，由川渝地方麻辣风味融合而来。 麻辣香锅源于土家风味，是当地老百姓的家常做法, 以麻、辣、鲜、香、油、混搭为特',
+        cuisine: '川菜',
+        efficacy: '活血化瘀，驱寒除湿',
+        level: 1,
+        user: {
+          nickName: '东东',
+          avatarUrl: '/static/images/0003.jpg'
+        }
+      }
     ]
   },
 
@@ -59,7 +72,13 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    if (!wx.getStorageSync("isLogin")) {
+      wx.reLaunch({
+        url: "/pages/access/login/login",
+      })
+    }else{
+      this.getCollectionRepiceList()
+    }
   },
 
   /**
@@ -88,6 +107,19 @@ Page({
    */
   onPullDownRefresh: function () {
 
+  },
+  /**
+   * 获取收藏的食谱列表
+   */
+  getCollectionRepiceList(){
+    wx.cloud.callFunction({
+      name: 'getCollectionRepice',
+      data: {
+        openID: JSON.parse(wx.getStorageSync('userInfo'))._openID
+      }
+    }).then(res => {
+      console.log(res)
+    })
   },
   /**
    * 切换当前tab

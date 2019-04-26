@@ -20,19 +20,19 @@ exports.main = async (event, context) => {
   const wxContext = cloud.getWXContext()
   try {
     let count = await db.collection('user').where({
-      _openId: wxContext.OPENID
+      _openID: wxContext.OPENID
     }).count()
     if (!count.total) {
       await db.collection('user').add({
         data: {
-          _openId: wxContext.OPENID,
+          _openID: wxContext.OPENID,
           nickName: event.nickName,
           avatarUrl: event.avatarUrl
         }
       })
     }
     return await db.collection('user').where({
-      _openId: wxContext.OPENID
+      _openID: wxContext.OPENID
     }).get()
   } catch (e) {
     console.log(e)

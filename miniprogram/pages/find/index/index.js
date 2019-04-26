@@ -33,13 +33,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function() {
-    if (!wx.getStorageSync("isLogin")) {
-      wx.reLaunch({
-        url: "/pages/access/login/login",
-      })
-    } else {
-      this.getFindList('REFRESH')
-    }
+    this.getFindList('REFRESH')
   },
 
   /**
