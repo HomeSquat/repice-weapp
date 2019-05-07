@@ -134,3 +134,21 @@ page {
   font-size: 20rpx;
   color: #61bfad;
 }
+
+.add{
+  position: fixed;
+  right: 30rpx;
+  bottom: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90rpx;
+  height: 90rpx;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 15rpx 2rpx rgba(0, 0, 0, .2);
+}
+.add--image{
+  width: 40rpx;
+  height: 40rpx;
+}

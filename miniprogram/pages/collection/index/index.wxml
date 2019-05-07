@@ -23,8 +23,8 @@
                   </view>
                 </view>
                 <view class="swiperItem--user">
-                  <image src="{{ item.user.avatarUrl }}" class="swiperItem--user__avatar"></image>
-                  <text class="swiperItem--user__name">{{ item.user.nickName }}</text>
+                  <image src="{{ item.author.avatarUrl }}" class="swiperItem--user__avatar"></image>
+                  <text class="swiperItem--user__name">{{ item.author.nickName }}</text>
                 </view>
               </view>
             </view>
@@ -33,5 +33,8 @@
       </swiper>
     </view>
     <view wx:if="{{ currentIndex === '1' }}" class="content--item works">2</view>
+  </view>
+  <view bindtap="gotoPage" data-page="upload" class="add">
+    <image src="/static/icon/add.png" class="add--image"></image>
   </view>
 </view>

@@ -1,100 +1,100 @@
 {
   "_id": 1,
-  "user": {
-    "name": "打代码的洞洞杰",
-    "avatar": "/static/images/0001.jpg"
-  },
   "title": "油炸鸡腿",
   "img": "/static/images/0001.jpg",
-  "des": "周氏炸鸡腿，真正外焦里嫩，超级好吃！！"
+  "des": "周氏炸鸡腿，真正外焦里嫩，超级好吃！！",
+  "level": 3,
+  "cuisine": "西餐",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bb"
 }
 {
   "_id": 2,
-  "user": {
-    "avatar": "/static/images/0002.jpg",
-    "name": "小小鳄鱼"
-  },
   "title": "法式小面包",
   "des": "正宗法式面包，浓浓的奶香，酥软的口感，丰富的营养 ！做法简单，跟我一起学吧。",
-  "img": "/static/images/0002.jpg"
+  "img": "/static/images/0002.jpg",
+  "level": 2,
+  "cuisine": "西餐",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bc"
 }
 {
   "_id": 3,
-  "user": {
-    "avatar": "/static/images/0003.jpg",
-    "name": "天然呆"
-  },
   "title": "麻辣香锅",
   "des": "发源于重庆缙云山，由川渝地方麻辣风味融合而来。麻 辣香锅源于土家风味，是当地老百姓的家常做法,以超级辣的辣椒制作而成",
-  "img": "/static/images/0003.jpg"
+  "img": "/static/images/0003.jpg",
+  "level": 1,
+  "cuisine": "川菜",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bc"
 }
 {
   "_id": 4,
-  "user": {
-    "avatar": "/static/images/0004.jpg",
-    "name": "大大的鳄鱼"
-  },
   "title": "麻辣小龙虾",
   "des": "发源于重庆缙云山，由川渝地方麻辣风味融合而来。麻 辣香锅源于土家风味，是当地老百姓的家常做法,以很多很多的辣椒很多很多的辣椒很多很多的辣椒很多很多的辣椒制作，辣死你！！！",
-  "img": "/static/images/0004.jpg"
+  "img": "/static/images/0004.jpg",
+  "level": 5,
+  "cuisine": "浙菜",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bd"
 }
 {
   "_id": 5,
-  "user": {
-    "avatar": "/static/images/0005.jpg",
-    "name": "天天卡牌"
-  },
   "title": "火星烧烤",
   "des": "发源于距离地球十万八千里的火星",
-  "img": "/static/images/0005.jpg"
+  "img": "/static/images/0005.jpg",
+  "level": 4,
+  "cuisine": "其他",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bd"
 }
 {
   "_id": 6,
-  "user": {
-    "avatar": "/static/images/0006.jpg",
-    "name": "茂茂"
-  },
   "title": "胡莱烧饼",
   "des": "桐乡不知道哪条路上的一家非常好吃的小店，里面的小烧饼非常好吃",
-  "img": "/static/images/0006.jpg"
+  "img": "/static/images/0006.jpg",
+  "level": 5,
+  "cuisine": "鲁菜",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10be"
 }
 {
   "_id": 7,
-  "user": {
-    "avatar": "/static/images/0007.jpg",
-    "name": "飞哥"
-  },
   "title": "小烧饼",
   "des": "下午茶的时候来上几个，别提有多爽了，特别是梅干菜肉馅的小烧饼，真香！",
-  "img": "/static/images/0007.jpg"
+  "img": "/static/images/0007.jpg",
+  "level": 4,
+  "cuisine": "粤菜",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bf"
 }
 {
   "_id": 8,
-  "user": {
-    "avatar": "/static/images/0008.jpg",
-    "name": "志哥"
-  },
   "title": "志哥烤肉",
   "des": "志哥家开的烤肉店",
-  "img": "/static/images/0008.jpg"
+  "img": "/static/images/0008.jpg",
+  "level": 4,
+  "cuisine": "西餐",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bf"
 }
 {
   "_id": 9,
-  "user": {
-    "avatar": "/static/images/0009.jpg",
-    "name": "阿咩"
-  },
   "title": "阿咩牌羊肉串",
   "des": "阿咩家开的羊肉摊，羊肉是正经羊肉，但是人有点不正经，不过羊肉串还挺好吃的！",
-  "img": "/static/images/0009.jpg"
+  "img": "/static/images/0009.jpg",
+  "level": 5,
+  "cuisine": "藏菜",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10g"
 }
 {
   "_id": 10,
-  "user": {
-    "avatar": "/static/images/0001.jpg",
-    "name": "考拉"
-  },
   "title": "考拉肉",
   "des": "某个国家的保护动物，肉质肥嫩鲜美，红烧清蒸都可以，",
-  "img": "/static/images/0001.jpg"
+  "img": "/static/images/0001.jpg",
+  "level": 4,
+  "cuisine": "其他",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10g"
 }

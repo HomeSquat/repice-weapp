@@ -1,0 +1,20 @@
+/* miniprogram/pages/collection/upload/index.wxss */
+.upload{
+  padding: 30rpx;
+}
+.item{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 90rpx;
+  border-bottom: 1rpx solid #61bfad;
+  font-size: 30rpx;
+}
+.item--label{
+  line-height: 30rpx;
+  color: #61bfad;
+}
+.item--input{
+  flex: 1;
+  padding-left: 40rpx;
+}

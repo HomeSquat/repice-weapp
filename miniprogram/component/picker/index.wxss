@@ -1,0 +1,48 @@
+/* component/picker/index.wxss */
+
+.picker {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  /* visibility: hidden; */
+}
+
+.picker--mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.picker--content {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+}
+.picker--content__top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40rpx;
+  border-bottom: 1rpx solid #ccc;
+  font-size: 32rpx;
+}
+.cancel{
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #666;
+}
+.confirm{
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #61bfad;
+}
+.picker-view{
+  text-align: center;
+  font-size: 32rpx;
+}

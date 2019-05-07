@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "上传菜谱",
+  "usingComponents": {
+    "m-picker": "/component/picker/index"
+  }
+}

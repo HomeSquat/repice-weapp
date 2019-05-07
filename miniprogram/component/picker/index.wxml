@@ -1,0 +1,17 @@
+<!--component/picker/index.wxml-->
+<view class="picker">
+  <view class="picker--mask"></view>
+  <view class="picker--content">
+    <view class="picker--content__top">
+      <view class="cancel">取消</view>
+      <view class="confirm">确认</view>
+    </view>
+    <view class="picker--content__bottom">
+      <picker-view indicator-style="height: 50px" style="height: 250px" class="picker-view">
+        <picker-view-column class="picker-view-column">
+          <view wx:for="{{data}}" style="line-height: 50px">{{item.label}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+<!--miniprogram/pages/collection/upload/index.wxml-->
+<view class="upload">
+  <view class="item">
+    <view class="item--label">菜单名称</view>
+    <input class="item--input" placeholder="请输入菜谱名称"></input>
+  </view>
+  <view class="item">
+    <view class="item--label">菜谱类型</view>
+    <input class="item--input" placeholder="请选择菜谱类型"></input>
+  </view>
+  <m-picker/>
+</view>
