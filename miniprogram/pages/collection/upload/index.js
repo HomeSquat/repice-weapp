@@ -5,7 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    typePicker: false, // 菜单类型picker
+    form: {
+      name: '',
+      type: 0,
+      typeLabel: '请选择菜谱类型',
+      level: 1,
+      img: '',
+      des: ''
+    }
   },
 
   /**
@@ -42,25 +50,57 @@ Page({
   onUnload: function () {
 
   },
-
   /**
-   * 页面相关事件处理函数--监听用户下拉动作
+   * 显示picker
    */
-  onPullDownRefresh: function () {
-
+  showPicker(){
+    this.setData({
+      typePicker: true
+    })
   },
-
   /**
-   * 页面上拉触底事件的处理函数
+   * 关闭菜谱类型picker
    */
-  onReachBottom: function () {
-
+  closeTypePicker(){
+    this.setData({
+      typePicker: false
+    })
   },
-
   /**
-   * 用户点击右上角分享
+   * 选择菜谱类型
    */
-  onShareAppMessage: function () {
-
+  changeType(e){
+    this.setData({
+      'form.type': e.detail.type,
+      'form.typeLabel': e.detail.label,
+      typePicker: false
+    })
+  },
+  /**
+   * 选择难度
+   */
+  changeLevel(e){
+    this.setData({
+      'form.level': e.detail.index
+    })
+  },
+  selectImg(){
+    let _this = this
+    wx.chooseImage({
+      count: 1,
+      success(res){
+        console.log(res)
+        if(res.tempFiles[0].size < 1024 * 1024){
+          _this.setData({
+            'form.img': res.tempFiles[0].path
+          })
+        }else{
+          wx.showToast({
+            image: '/static/icon/warning.png',
+            title: '所选图片太大',
+          })
+        }
+      }
+    })
   }
 })

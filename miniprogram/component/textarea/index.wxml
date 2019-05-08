@@ -1,0 +1,4 @@
+<!--component/textarea/index.wxml-->
+<view class="textarea">
+  <view class="placeholder">请输入</view>
+</view>

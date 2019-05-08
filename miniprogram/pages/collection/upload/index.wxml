@@ -2,11 +2,33 @@
 <view class="upload">
   <view class="item">
     <view class="item--label">菜单名称</view>
-    <input class="item--input" placeholder="请输入菜谱名称"></input>
+    <input class="item--input" placeholder-class="placeholder" placeholder="请输入菜谱名称"></input>
   </view>
   <view class="item">
     <view class="item--label">菜谱类型</view>
-    <input class="item--input" placeholder="请选择菜谱类型"></input>
+    <view bindtap="showPicker" class="{{ form.type === 0 ? 'placeholder' : '' }} item--input">{{ form.typeLabel }}</view>
   </view>
-  <m-picker/>
+  <view class="item">
+    <view class="item--label">菜谱功效</view>
+    <input class="item--input" placeholder-class="placeholder" placeholder="简短的描述一下菜谱功效" class="item--input"></input>
+  </view>
+  <view class="item">
+    <view class="item--label">菜谱难度</view>
+    <rate value="{{ form.level }}" size="20" bind:change="changeLevel" class="item--input rate" />
+  </view>
+  <view class="column">
+    <view class="item--label">菜谱照片</view>
+    <view bindtap="selectImg" class="item--box photo">
+      <image wx:if="{{ form.img === '' }}" src="/static/icon/add.png" class="item--box__add"></image>
+      <image wx:else src="{{ form.img }}" class="item--box__img"></image>
+    </view>
+  </view>
+  <view class="column">
+    <view class="item--label">描述</view>
+    <view class="item--box des">
+      <textarea value="{{ form.des }}" placeholder="请输入菜谱描述信息" placeholder-class="placeholder" maxlength="200"/>
+    </view>
+  </view>
+  <view bindtap="submit" class="submit">上传</view>
+  <m-picker visible="{{ typePicker }}" bindconfirm="changeType" bindclose="closeTypePicker" />
 </view>

@@ -4,6 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    visible: {
+      type: Boolean,
+      value: false
+    },
     data: {
       type: Array,
       value: [
@@ -38,6 +42,10 @@ Component({
         {
           type: 8,
           label: '闽菜'
+        },
+        {
+          type: 9,
+          label: '西餐'
         }
       ]
     }
@@ -47,13 +55,31 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    index: 0
   },
 
   /**
    * 组件的方法列表
    */
   methods: {
-
+    /**
+     * 关闭
+     */
+    handleCloseClick(){
+      this.triggerEvent('close', {})
+    },
+    handleConfirmClick(){
+      let type = this.data.data[this.data.index].type
+      let label = this.data.data[this.data.index].label
+      this.triggerEvent('confirm', {
+        type,
+        label
+      })
+    },
+    changeType(e){
+      this.setData({
+        index: e.detail.value
+      })
+    }
   }
 })
