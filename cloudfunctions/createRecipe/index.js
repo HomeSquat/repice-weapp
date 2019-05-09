@@ -8,7 +8,7 @@ const _ = db.command
 exports.main = async(event, context) => {
   const wxContext = cloud.getWXContext()
   try {
-    return await db.collection('recipe').add({
+    let addResult = await db.collection('recipe').add({
       data: {
         title: event.title,
         img: event.img,
@@ -16,6 +16,13 @@ exports.main = async(event, context) => {
         level: event.level,
         cuisine: event.cuisine,
         efficacy: event.efficacy,
+        userID: event.userID
+      }
+    })
+    return await db.collection('collection-repice').add({
+      data: {
+        createTime: new Date(),
+        recipeID: addResult.result._id,
         userID: event.userID
       }
     })

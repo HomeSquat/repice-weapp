@@ -8,7 +8,6 @@ exports.main = async(event, context) => {
   const wxContext = cloud.getWXContext()
   try {
     let cuisineList = await db.collection('cuisine').orderBy('type','asc').get()
-    console.log(cuisineList.data)
     // 查询符合条件的记录总数
     let count = await db.collection('collection-repice')
       .where({
