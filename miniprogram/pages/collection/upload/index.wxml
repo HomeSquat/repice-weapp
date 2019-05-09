@@ -1,16 +1,16 @@
 <!--miniprogram/pages/collection/upload/index.wxml-->
 <view class="upload">
   <view class="item">
-    <view class="item--label">菜单名称</view>
-    <input class="item--input" placeholder-class="placeholder" placeholder="请输入菜谱名称"></input>
+    <view class="item--label">菜单标题</view>
+    <input value="{{ form.title }}" placeholder-class="placeholder" placeholder="请输入菜谱标题" maxlength="10" bindinput="inputTitle" class="item--input"></input>
   </view>
   <view class="item">
     <view class="item--label">菜谱类型</view>
-    <view bindtap="showPicker" class="{{ form.type === 0 ? 'placeholder' : '' }} item--input">{{ form.typeLabel }}</view>
+    <view bindtap="showPicker" class="{{ form.cuisine === 0 ? 'placeholder' : '' }} item--input">{{ form.typeLabel }}</view>
   </view>
   <view class="item">
     <view class="item--label">菜谱功效</view>
-    <input class="item--input" placeholder-class="placeholder" placeholder="简短的描述一下菜谱功效" class="item--input"></input>
+    <input value="{{ form.efficacy }}" placeholder-class="placeholder" placeholder="简短的描述一下菜谱功效" bindinput="inputEfficacy" class="item--input"></input>
   </view>
   <view class="item">
     <view class="item--label">菜谱难度</view>
@@ -26,7 +26,7 @@
   <view class="column">
     <view class="item--label">描述</view>
     <view class="item--box des">
-      <textarea value="{{ form.des }}" placeholder="请输入菜谱描述信息" placeholder-class="placeholder" maxlength="200"/>
+      <textarea value="{{ form.des }}" placeholder="请输入菜谱描述信息" placeholder-class="placeholder" maxlength="200" bindinput="inputDes"/>
     </view>
   </view>
   <view bindtap="submit" class="submit">上传</view>

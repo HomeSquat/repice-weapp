@@ -9,8 +9,8 @@
     <view wx:if="{{ currentIndex === '0' }}" class="content--item recipe">
       <swiper current-item-id="{{ currentItem }}" previous-margin="80rpx" next-margin="80rpx" style="height: {{ contentHeight }}" bindchange="changeItem">
         <block wx:for="{{recipeList}}" wx:key="{{ item.name }}">
-          <swiper-item item-id="{{ item.id }}" class="swiper--item">
-            <view class="{{ currentItem === item.id ? 'active' : '' }} swiper--item__content">
+          <swiper-item item-id="{{ index }}" class="swiper--item">
+            <view class="{{ currentItem === index ? 'active' : '' }} swiper--item__content">
               <image mode="aspectFill" src="{{ item.img }}" class="swiperItem--image"></image>
               <view class="swiperItem--bottom">
                 <view class="swiperItem--title">{{ item.title }}</view>

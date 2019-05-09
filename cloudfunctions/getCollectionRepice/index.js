@@ -7,6 +7,8 @@ const db = cloud.database()
 exports.main = async(event, context) => {
   const wxContext = cloud.getWXContext()
   try {
+    let cuisineList = await db.collection('cuisine').orderBy('type','asc').get()
+    console.log(cuisineList.data)
     // 查询符合条件的记录总数
     let count = await db.collection('collection-repice')
       .where({
@@ -37,7 +39,7 @@ exports.main = async(event, context) => {
         id: list.data[i]._id, // 收藏id
         title: recipeInfo.data.title, // 食谱名称
         img: recipeInfo.data.img, // 食谱主图
-        cuisine: recipeInfo.data.cuisine, // 食谱所属菜系
+        cuisine: cuisineList.data[recipeInfo.data.cuisine - 1].label, // 食谱所属菜系
         des: recipeInfo.data.des, // 食谱描述
         level: recipeInfo.data.level, // 食谱难度
         efficacy: recipeInfo.data.efficacy, // 食谱功效

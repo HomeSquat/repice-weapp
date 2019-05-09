@@ -7,7 +7,7 @@ Page({
   data: {
     contentHeight: '0px',
     currentIndex: '0',
-    currentItem: 1,
+    currentItem: 0,
     tabs: [{
         index: '0',
         name: '食谱',
@@ -129,7 +129,7 @@ Page({
   getData(e) {
     let page = this.data.tabs[0].pagination.page
     let pageSize = this.data.tabs[0].pagination.pageSize
-    if ((e.detail.current === page * pageSize - 2) && page <= this.data.tabs[0].pagination.totalPage) {
+    if ((e.detail.current === page * pageSize - 3) && page <= this.data.tabs[0].pagination.totalPage) {
       this.getCollectionRepiceList(page + 1)
       this.setData({
         'tabs[0].pagination.page': page + 1

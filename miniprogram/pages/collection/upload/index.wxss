@@ -71,6 +71,7 @@
 }
 
 .des textarea {
+  z-index: 1;
   width: 100%;
   line-height: 50rpx;
 }

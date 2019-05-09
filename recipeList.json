@@ -1,100 +1,100 @@
 {
-  "_id": 1,
-  "title": "油炸鸡腿",
-  "img": "/static/images/0001.jpg",
-  "des": "周氏炸鸡腿，真正外焦里嫩，超级好吃！！",
-  "level": 3,
-  "cuisine": "西餐",
-  "efficacy": "功效",
-  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bb"
-}
-{
-  "_id": 2,
-  "title": "法式小面包",
-  "des": "正宗法式面包，浓浓的奶香，酥软的口感，丰富的营养 ！做法简单，跟我一起学吧。",
-  "img": "/static/images/0002.jpg",
-  "level": 2,
-  "cuisine": "西餐",
-  "efficacy": "功效",
-  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bc"
-}
-{
-  "_id": 3,
-  "title": "麻辣香锅",
-  "des": "发源于重庆缙云山，由川渝地方麻辣风味融合而来。麻 辣香锅源于土家风味，是当地老百姓的家常做法,以超级辣的辣椒制作而成",
-  "img": "/static/images/0003.jpg",
-  "level": 1,
-  "cuisine": "川菜",
-  "efficacy": "功效",
-  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bc"
-}
-{
-  "_id": 4,
-  "title": "麻辣小龙虾",
-  "des": "发源于重庆缙云山，由川渝地方麻辣风味融合而来。麻 辣香锅源于土家风味，是当地老百姓的家常做法,以很多很多的辣椒很多很多的辣椒很多很多的辣椒很多很多的辣椒制作，辣死你！！！",
-  "img": "/static/images/0004.jpg",
-  "level": 5,
-  "cuisine": "浙菜",
-  "efficacy": "功效",
-  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bd"
-}
-{
-  "_id": 5,
-  "title": "火星烧烤",
+  "_id": "96c1cbbe5cd3e8740eb8daae07fa611b",
   "des": "发源于距离地球十万八千里的火星",
-  "img": "/static/images/0005.jpg",
-  "level": 4,
-  "cuisine": "其他",
+  "level": 5.0,
+  "cuisine": 9.0,
   "efficacy": "功效",
-  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bd"
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bb",
+  "title": "火星烧烤",
+  "img": "cloud://test-99a32b.7465-test-99a32b-1259038772/recipe/recipe-1557391474063.jpg"
 }
 {
-  "_id": 6,
+  "_id": "96c1cbbe5cd3e8cb0eb905bf00729c74",
+  "level": 4.0,
+  "cuisine": 5.0,
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bc",
+  "title": "小烧饼",
+  "img": "cloud://test-99a32b.7465-test-99a32b-1259038772/recipe/recipe-1557391559571.jpg",
+  "des": "下午茶的时候来上几个，别提有多爽了，特别是梅干菜肉馅的小烧饼，真香！"
+}
+{
+  "_id": "988c1b1b5cd3e85c0eba38013eb7d605",
+  "cuisine": 1.0,
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bc",
+  "title": "麻辣小龙虾",
+  "img": "cloud://test-99a32b.7465-test-99a32b-1259038772/recipe/recipe-1557391449661.jpg",
+  "des": "发源于重庆缙云山，由川渝地方麻辣风味融合而来。麻 辣香锅源于土家风味，是当地老百姓的家常做法,以很多很多的辣椒很多很多的辣椒很多很多的辣椒很多很多的辣椒制作，辣死你！！！",
+  "level": 5.0
+}
+{
+  "_id": "9c4488c75cd3e7f50ebaac877871e49a",
+  "level": 2.0,
+  "cuisine": 9.0,
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bd",
+  "title": "法式小面包",
+  "img": "cloud://test-99a32b.7465-test-99a32b-1259038772/recipe/recipe-1557391346499.jpg",
+  "des": "正宗法式面包，浓浓的奶香，酥软的口感，丰富的营养 ！做法简单，跟我一起学吧。"
+}
+{
+  "_id": "9c4488c75cd3e8a90ebb056b6ea0157b",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bd",
   "title": "胡莱烧饼",
+  "img": "cloud://test-99a32b.7465-test-99a32b-1259038772/recipe/recipe-1557391525980.jpg",
   "des": "桐乡不知道哪条路上的一家非常好吃的小店，里面的小烧饼非常好吃",
-  "img": "/static/images/0006.jpg",
-  "level": 5,
-  "cuisine": "鲁菜",
+  "level": 5.0,
+  "cuisine": 3.0
+}
+{
+  "_id": "9c4488c75cd3e8e40ebb23c52680ac69",
+  "title": "志哥烤肉",
+  "img": "cloud://test-99a32b.7465-test-99a32b-1259038772/recipe/recipe-1557391586309.jpg",
+  "des": "志哥家开的烤肉店",
+  "level": 3.0,
+  "cuisine": 6.0,
   "efficacy": "功效",
   "userID": "96c1cbbe5cb6b9ad0098c7905c6f10be"
 }
 {
-  "_id": 7,
-  "title": "小烧饼",
-  "des": "下午茶的时候来上几个，别提有多爽了，特别是梅干菜肉馅的小烧饼，真香！",
-  "img": "/static/images/0007.jpg",
-  "level": 4,
-  "cuisine": "粤菜",
-  "efficacy": "功效",
-  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bf"
-}
-{
-  "_id": 8,
-  "title": "志哥烤肉",
-  "des": "志哥家开的烤肉店",
-  "img": "/static/images/0008.jpg",
-  "level": 4,
-  "cuisine": "西餐",
-  "efficacy": "功效",
-  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bf"
-}
-{
-  "_id": 9,
+  "_id": "9c4488c75cd3e9060ebb348256334f2a",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bf",
   "title": "阿咩牌羊肉串",
+  "img": "cloud://test-99a32b.7465-test-99a32b-1259038772/recipe/recipe-1557391618859.jpg",
   "des": "阿咩家开的羊肉摊，羊肉是正经羊肉，但是人有点不正经，不过羊肉串还挺好吃的！",
-  "img": "/static/images/0009.jpg",
-  "level": 5,
-  "cuisine": "藏菜",
-  "efficacy": "功效",
-  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10g"
+  "level": 4.0,
+  "cuisine": 7.0,
+  "efficacy": "功效"
 }
 {
-  "_id": 10,
+  "_id": "9c4488c75cd3e9190ebb3e6c53583d44",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10bf",
   "title": "考拉肉",
+  "img": "cloud://test-99a32b.7465-test-99a32b-1259038772/recipe/recipe-1557391638227.jpg",
   "des": "某个国家的保护动物，肉质肥嫩鲜美，红烧清蒸都可以，",
-  "img": "/static/images/0001.jpg",
-  "level": 4,
-  "cuisine": "其他",
+  "level": 2.0,
+  "cuisine": 7.0,
+  "efficacy": "功效"
+}
+{
+  "_id": "ee3099285cd3e7af0eb8650b4e007a8a",
+  "img": "cloud://test-99a32b.7465-test-99a32b-1259038772/recipe/recipe-1557391276174.jpg",
+  "des": "周氏炸鸡腿，真正外焦里嫩，超级好吃！！",
+  "level": 3.0,
+  "cuisine": 2.0,
   "efficacy": "功效",
-  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10g"
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10g",
+  "title": "油炸鸡腿"
+}
+{
+  "_id": "ee3099285cd3e8440eb8adc877417795",
+  "efficacy": "功效",
+  "userID": "96c1cbbe5cb6b9ad0098c7905c6f10g",
+  "title": "麻辣香锅",
+  "img": "cloud://test-99a32b.7465-test-99a32b-1259038772/recipe/recipe-1557391425948.jpg",
+  "des": "发源于重庆缙云山，由川渝地方麻辣风味融合而来。麻 辣香锅源于土家风味，是当地老百姓的家常做法,以超级辣的辣椒制作而成",
+  "level": 1.0,
+  "cuisine": 1.0
 }

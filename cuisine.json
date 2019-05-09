@@ -1,0 +1,45 @@
+{
+  "_id": "1edc15cf-d28c-4373-ad67-2983924e3a0c",
+    "type": 1.0,
+    "label": "川菜"
+}
+{
+  "_id": "25ae3e8e-e9c2-4e66-bfea-4e9dc023a1be",
+    "type": 2.0,
+    "label": "浙菜"
+}
+{
+  "_id": "3b18c6be-c08e-40aa-bb6d-47ac007095eb",
+    "type": 3.0,
+    "label": "鲁菜"
+}
+{
+  "_id": "485cf445-1ff2-4afb-9389-d177928bf5fa",
+  "type": 4.0,
+  "label": "粤菜"
+}
+{
+  "_id": "4f08f11e-ef0d-45e2-9c5b-cc13ad82399e",
+  "type": 5.0,
+  "label": "苏菜"
+}
+{
+  "_id": "9edff4e4-12a2-4fa3-95f1-c171c4523989",
+  "type": 6.0,
+  "label": "湘菜"
+}
+{
+  "_id": "c4da73ab-c899-4378-9050-e63f8f697994",
+  "type": 7.0,
+  "label": "徽菜"
+}
+{
+  "_id": "dd83b068-8438-4171-8c74-63a6adb6a922",
+  "type": 8.0,
+  "label": "闽菜"
+}
+{
+  "_id": "eaf80313-20ad-4ea2-b510-d2bd7e59a30c",
+  "type": 9.0,
+  "label": "西餐"
+}
