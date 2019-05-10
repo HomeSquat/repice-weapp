@@ -22,7 +22,7 @@ exports.main = async(event, context) => {
     return await db.collection('collection-repice').add({
       data: {
         createTime: new Date(),
-        recipeID: addResult.result._id,
+        recipeID: addResult._id,
         userID: event.userID
       }
     })
