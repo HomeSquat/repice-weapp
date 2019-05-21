@@ -7,6 +7,9 @@
   </view>
   <view class="content">
     <view wx:if="{{ currentIndex === '0' }}" class="content--item recipe">
+      <view wx:if="{{ recipeList.length === 0 }}" class="none--content">
+        <view class="none--content__text">您还没有收藏哦</view>
+      </view>
       <swiper current-item-id="{{ currentItem }}" previous-margin="80rpx" next-margin="80rpx" style="height: {{ contentHeight }}" bindchange="changeItem">
         <block wx:for="{{recipeList}}" wx:key="{{ item.name }}">
           <swiper-item item-id="{{ index }}" class="swiper--item">
@@ -16,10 +19,13 @@
                 <view class="swiperItem--title">{{ item.title }}</view>
                 <view class="swiperItem--des">{{ item.des }}</view>
                 <view class="swiperItem--info">
-                  <view class="swiperItem--info__item swiperItem--info__cuisine"><text class="label">菜系：</text>{{ item.cuisine }}</view>
-                  <view class="swiperItem--info__item swiperItem--info__efficacy"><text class="label">功效：</text>{{ item.efficacy }}</view>
-                  <view class="swiperItem--info__item swiperItem--info__level"><text class="label">难度：</text>
-                    <rate value="{{ item.level }}" size="15" class="rate"/>
+                  <view class="swiperItem--info__item swiperItem--info__cuisine">
+                    <text class="label">菜系：</text>{{ item.cuisine }}</view>
+                  <view class="swiperItem--info__item swiperItem--info__efficacy">
+                    <text class="label">功效：</text>{{ item.efficacy }}</view>
+                  <view class="swiperItem--info__item swiperItem--info__level">
+                    <text class="label">难度：</text>
+                    <rate value="{{ item.level }}" size="15" class="rate" />
                   </view>
                 </view>
                 <view class="swiperItem--user">
@@ -32,9 +38,21 @@
         </block>
       </swiper>
     </view>
-    <view wx:if="{{ currentIndex === '1' }}" class="content--item works">2</view>
+    <view wx:if="{{ currentIndex === '1' }}" class="content--item">
+      <view wx:if="{{ workList.length === 0 }}" class="none--content">
+        <view class="none--content__text">您还没有上传作品哦</view>
+      </view>
+      <scroll-view scroll-y bindscrolltolower="scrollTolower" style="height: {{ contentHeight }}" class="works-scroll">
+        <view class="works">
+          <view wx:for="{{ workList }}" wx:key="{{ item.imgUrl }}" data-img-url="{{ item.imgUrl }}" bindtap="showImg" class="works--item">
+            <image src="{{ item.imgUrl }}"></image>
+          </view>
+        </view>
+        <pagination visible="{{ paginationStatus.visible }}" statusText="{{ paginationStatus.text }}" />
+      </scroll-view>
+    </view>
   </view>
-  <view bindtap="gotoPage" data-page="upload" class="add">
+  <view bindtap="gotoPage" class="add">
     <image src="/static/icon/add.png" class="add--image"></image>
   </view>
 </view>

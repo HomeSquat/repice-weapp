@@ -17,7 +17,7 @@ exports.main = async(event, context) => {
         cuisine: event.cuisine,
         efficacy: event.efficacy,
         userID: event.userID
-      }
+      } 
     })
     return await db.collection('collection-repice').add({
       data: {

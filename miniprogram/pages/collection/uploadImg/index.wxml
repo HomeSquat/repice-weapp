@@ -1,0 +1,11 @@
+<!--miniprogram/pages/collection/uploadImg/index.wxml-->
+<view class="upload">
+  <view class="column">
+    <view class="item--label">作品照片</view>
+    <view bindtap="selectImg" class="item--box photo">
+      <image wx:if="{{ form.img === '' }}" src="/static/icon/add.png" class="item--box__add"></image>
+      <image wx:else src="{{ form.img }}" class="item--box__img"></image>
+    </view>
+  </view>
+  <view bindtap="submit" class="submit">上传</view>
+</view>

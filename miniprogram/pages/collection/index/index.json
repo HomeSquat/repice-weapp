@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "收藏",
   "usingComponents": {
-    "rate": "/component/rate/index"
+    "rate": "/component/rate/index",
+    "pagination": "/component/pagination/index"
   }
 }

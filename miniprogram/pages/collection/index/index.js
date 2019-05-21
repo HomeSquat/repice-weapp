@@ -20,10 +20,21 @@ Page({
       },
       {
         index: '1',
-        name: '作品'
+        name: '作品',
+        pagination: {
+          page: 1,
+          pageSize: 15,
+          total: 1,
+          totalPage: 2
+        },
       }
     ],
-    recipeList: []
+    paginationStatus: {
+      visible: false,
+      text: '加载中'
+    },
+    recipeList: [],
+    workList: []
   },
 
   /**
@@ -43,6 +54,7 @@ Page({
       })
     } else {
       this.getCollectionRepiceList(1)
+      this.getCollectionWorkList(1)
     }
   },
 
@@ -93,6 +105,43 @@ Page({
     })
   },
   /**
+   * 获取自己的作品图片
+   */
+  getCollectionWorkList(page) {
+    if(page <= this.data.tabs[1].pagination.totalPage){
+      wx.cloud.callFunction({
+        name: 'getCollectionWork',
+        data: {
+          userID: JSON.parse(wx.getStorageSync('userInfo'))._id,
+          page,
+          pageSize: this.data.tabs[1].pagination.pageSize
+        }
+      })
+        .then(res => {
+          console.log(res)
+          let oldWorkList = this.data.workList
+          setTimeout(() => {
+            this.setData({
+              'tabs[0].pagination.totalPage': res.result.pagination.totalPage,
+              'paginationStatus.visible': false,
+              workList: oldWorkList.concat(res.result.list.data)
+            })
+          }, 500)
+        })
+        .catch(err => {
+          this.setData({
+            'paginationStatus.visible': false
+          })
+        })
+    }else{
+      this.setData({
+        'paginationStatus.visible': true,
+        'paginationStatus.text': '没有更多了',
+      })
+    }
+    
+  },
+  /**
    * 切换当前tab
    */
   changeCurrentIndex(e) {
@@ -136,12 +185,36 @@ Page({
       })
     }
   },
-  gotoPage(e){
+  gotoPage(e) {
     console.log(e)
-    if(e.currentTarget.dataset.page === 'upload'){
+    if (this.data.currentIndex === '0') {
       wx.navigateTo({
         url: '/pages/collection/upload/index'
       })
+    } else {
+      console.log('上传照片')
+      wx.navigateTo({
+        url: '/pages/collection/uploadImg/index'
+      })
     }
+  },
+  /**
+   * 查看自己的作品图片
+   */
+  showImg(e) {
+    wx.previewImage({
+      current: e.currentTarget.dataset.imgUrl, // 当前显示图片的http链接
+      urls: this.data.workList.map(item => {
+        return item.imgUrl
+      }) // 需要预览的图片http链接列表
+    })
+  },
+  scrollTolower() {
+    let page = this.data.tabs[1].pagination.page
+    this.setData({
+      'tabs[1].pagination.page': page + 1,
+      'paginationStatus.visible': true
+    })
+    this.getCollectionWorkList(page + 1)
   }
 })
